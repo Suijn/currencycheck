@@ -1,10 +1,10 @@
 .PHONY: unit check_style reformat
 
 unit:
-	poetry run pytest --ignore src/tests/integration
+	poetry run pytest --ignore tests/integration
 
 integration:
-	poetry run pytest src/tests/integration
+	poetry run pytest tests/integration
 
 check_style:
 	poetry run black --check .
