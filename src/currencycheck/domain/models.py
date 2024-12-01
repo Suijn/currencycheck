@@ -6,6 +6,12 @@ import pandas as pd
 
 class CurrencyStock(enum.StrEnum):
     eurusd = "EURUSD=X"
+    eurgpb = "EURGBP=X"
+    eurjpy = "EURJPY=X"
+    eurcad = "EURCAD=X"
+    eursek = "EURSEK=X"
+    eurchf = "EURCHF=X"
+    eurhuf = "EURHUF=X"
 
 
 class OHLC(enum.StrEnum):
