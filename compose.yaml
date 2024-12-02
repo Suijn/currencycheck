@@ -1,0 +1,15 @@
+services:
+  server:
+    build:
+      context: .
+      target: run
+    command: server
+    ports:
+      - 8501:8501
+    container_name: currencycheck_server
+  integration_tests:
+    build:
+      context: .
+      target: test
+    command: integration_test
+    container_name: currencycheck_test

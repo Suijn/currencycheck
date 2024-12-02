@@ -1,10 +1,16 @@
-.PHONY: unit check_style reformat
+.PHONY: server unit integration down check_style reformat
+
+server:
+	docker compose up --build server
 
 unit:
 	poetry run pytest --ignore tests/integration
 
 integration:
-	poetry run pytest tests/integration
+	docker compose up --build integration_tests
+
+down:
+	docker compose down -v
 
 check_style:
 	poetry run black --check .
